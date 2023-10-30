@@ -1,3 +1,8 @@
 const a = 1
 
-export default a
+const b = 2
+
+export {
+  a,
+  b
+}
