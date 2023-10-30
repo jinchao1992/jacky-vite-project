@@ -6,14 +6,18 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "lint": "eslint . --ext '.js,.ts' --fix",
     "prepare": "husky install",
     "changelog": "conventional-changelog -p -i CHANGELOG.md -s",
-    "versions": "bumpp"
+    "versions": "bumpp",
+    "before-release": "pnpm changelog && pnpm build && bumpp"
   },
   "files": [
     "es",
     "lib",
-    "index.d.ts"
+    "README",
+    "index.d.ts",
+    "LICENSE"
   ],
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -24,6 +28,7 @@
       "git add"
     ]
   },
+  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^18.2.0",
     "@commitlint/config-conventional": "^18.1.0",
@@ -36,5 +41,12 @@
     "lint-staged": "^15.0.2",
     "typescript": "^5.2.2",
     "vite": "^4.4.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   }
 }
