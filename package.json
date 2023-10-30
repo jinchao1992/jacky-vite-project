@@ -11,7 +11,7 @@
     "changelog": "conventional-changelog -p -i CHANGELOG.md -s",
     "versions": "bumpp",
     "before-release": "pnpm changelog && pnpm build && bumpp",
-    "release": "pnpm publsish"
+    "publish": "pnpm publish"
   },
   "files": [
     "es",
