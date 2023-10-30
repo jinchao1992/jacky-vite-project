@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "changelog": "conventional-changelog -p -i CHANGELOG.md -s"
   },
   "files": [
     "es",
@@ -27,6 +28,7 @@
     "@commitlint/config-conventional": "^18.1.0",
     "@typescript-eslint/eslint-plugin": "^6.9.0",
     "@typescript-eslint/parser": "^6.9.0",
+    "conventional-changelog-cli": "^4.1.0",
     "eslint": "^8.52.0",
     "husky": "^8.0.0",
     "lint-staged": "^15.0.2",
