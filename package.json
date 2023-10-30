@@ -1,7 +1,7 @@
 {
   "name": "vite-project",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,8 @@
     "prepare": "husky install",
     "changelog": "conventional-changelog -p -i CHANGELOG.md -s",
     "versions": "bumpp",
-    "before-release": "pnpm changelog && pnpm build && bumpp"
+    "before-release": "pnpm changelog && pnpm build && bumpp",
+    "release": "pnpm publsish"
   },
   "files": [
     "es",
